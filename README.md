@@ -17,7 +17,7 @@ The login page asks only for username and password. The backend identifies wheth
 
 ## Vercel deployment
 
-Configure `VITE_API_URL` as the public HTTPS backend URL ending in `/api/v1`. The Vercel build fails early when this value is absent or malformed. `vercel.json` provides a single-page-application fallback so direct dashboard URLs load correctly.
+Configure `VITE_API_URL` as the public HTTPS backend URL ending in `/api/v1`. The build can complete without it, but the deployed frontend cannot reach the backend until it is configured. `vercel.json` provides a single-page-application fallback so direct dashboard URLs load correctly.
 
 ## Quality commands
 
