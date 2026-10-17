@@ -15,6 +15,10 @@ One role-based React application for all four operating realms:
 
 The login page asks only for username and password. The backend identifies whether the account is a Trader, Broker, Exchange, or Storage user and the frontend routes to the corresponding workspace. Traders receive account-scoped desk access.
 
+## Vercel deployment
+
+Configure `VITE_API_URL` as the public HTTPS backend URL ending in `/api/v1`. The Vercel build fails early when this value is absent or malformed. `vercel.json` provides a single-page-application fallback so direct dashboard URLs load correctly.
+
 ## Quality commands
 
 - `npm run build`
